@@ -15,18 +15,18 @@ A static constructor takes no members and is called before any instance or stati
 ```js
 class Multiton
 {
-  static constructor()
-  {
-    this.instances = {}; // instances is now static
-  }
-  constructor(name)
-  {
-    if (this.instances.hasOwnProperty(name))
+    static constructor()
     {
-      throw `Multiton name already used`;
+        this.instances = {}; // instances is now static
     }
-    this.instances[name] = this;
-  }
+    constructor(name)
+    {
+        if (this.instances.hasOwnProperty(name))
+        {
+            throw `Multiton name already used`;
+        }
+        this.instances[name] = this;
+    }
 }
 
 var foo = new Multiton(`foo`);
