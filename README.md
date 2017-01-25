@@ -1,5 +1,4 @@
 # ES8 Proposal: Static Constructor
-An ES8 proposal
 
 ## Introduction
 
