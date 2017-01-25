@@ -17,7 +17,7 @@ class Multiton
 {
     static constructor()
     {
-        this.instances = {}; // instances is now static
+        this.instances = {}; // instances is now a static member of Multiton
     }
     constructor(name)
     {
