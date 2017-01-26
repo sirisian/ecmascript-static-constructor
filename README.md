@@ -18,6 +18,7 @@ class Multiton
     static constructor()
     {
         this.instances = {}; // instances is now a static member of Multiton
+        // Multiton.instances = {}; // Same thing. Using "this" removes the need for using the name in the class
     }
     constructor(name)
     {
@@ -32,4 +33,5 @@ class Multiton
 var foo = new Multiton(`foo`);
 var bar = new Multiton(`bar`);
 var baz = new Multiton(`bar`); // throws `Multiton name already used`
+// Multiton.instances can be used to access the instances object
 ```
